@@ -40,7 +40,8 @@
     "coverage": "nyc npm run test",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "docs": "vitepress dev docs",
-    "docs:build": "vitepress build docs"
+    "docs:build": "vitepress build docs",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@casl/ability": "^5.4.4",
@@ -49,7 +50,9 @@
     "@feathersjs/transport-commons": "^4.5.15",
     "feathers-hooks-common": "^6.1.5",
     "feathers-utils": "^1.11.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "patch-package": "^8.0.0",
+    "postinstall-postinstall": "^2.1.0"
   },
   "devDependencies": {
     "@feathersjs/authentication": "^4.5.15",

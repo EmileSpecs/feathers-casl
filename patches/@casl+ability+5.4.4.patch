@@ -1,0 +1,13 @@
+diff --git a/node_modules/@casl/ability/dist/types/matchers/conditions.d.ts b/node_modules/@casl/ability/dist/types/matchers/conditions.d.ts
+index 98d2813..f024c4d 100644
+--- a/node_modules/@casl/ability/dist/types/matchers/conditions.d.ts
++++ b/node_modules/@casl/ability/dist/types/matchers/conditions.d.ts
+@@ -25,7 +25,7 @@ declare const defaultInstructions: {
+ interface MongoQueryFactory extends GenericFactory {
+     produce: MongoQuery<this[0]>;
+ }
+-declare type MergeUnion<T extends {}, Keys extends keyof T = keyof T> = {
++declare type MergeUnion<T, Keys extends keyof T = keyof T> = {
+     [K in Keys]: T[K];
+ };
+ export declare type MongoQuery<T = AnyObject> = BuildMongoQuery<MergeUnion<T>, {
